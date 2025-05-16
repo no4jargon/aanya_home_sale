@@ -91,7 +91,6 @@ const ITEMS_DATA = [
     "price": 120,
     "description": "Chest of drawers with attached vanity stand.",
     "images": [
-      "items/Chest of drawers with vanity stand/IMG_2256 copy.JPG",
       "items/Chest of drawers with vanity stand/IMG_2256.JPG"
     ]
   },
@@ -100,7 +99,9 @@ const ITEMS_DATA = [
     "category": "Bedroom",
     "price": 40,
     "description": "Round wall mirror, modern design.",
-    "images": []
+    "images": [
+      "items/Circle mirror/IMG_2256 copy.JPG"
+    ]
   },
   {
     "name": "Coffee machine",
