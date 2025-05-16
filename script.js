@@ -14,11 +14,13 @@ function renderItems() {
       itemDiv.className = `item${cart[item.name] ? ' cart-selected' : ''}`;
       
       let currentImgIndex = 0;
+      const hasMultipleImages = item.images.length > 1;
+
       itemDiv.innerHTML = `
         <div class="tick">✓</div>
         <img src="${item.images[0]}">
-        <div class="arrow arrow-left">&#9664;</div>
-        <div class="arrow arrow-right">&#9654;</div>
+        ${hasMultipleImages ? '<div class="arrow arrow-left">&#9664;</div>' : ''}
+        ${hasMultipleImages ? '<div class="arrow arrow-right">&#9654;</div>' : ''}
         <div class="name">${item.name}</div>
         <div class="price">$${item.price}</div>
       `;
@@ -94,7 +96,7 @@ function openFullscreen(images, startIndex) {
 }
 
 document.getElementById('buy-btn').onclick = () => {
-  alert('📞 Call Aanya Sanghavi at +1 (347) 410-4301');
+  alert('📞 Text Aanya Sanghavi at +1 (347) 410-4301');
 };
 
 renderItems();
