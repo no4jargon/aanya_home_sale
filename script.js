@@ -96,7 +96,15 @@ function openFullscreen(images, startIndex) {
 }
 
 document.getElementById('buy-btn').onclick = () => {
-  alert('📞 Text Aanya Sanghavi at +1 (347) 410-4301');
+  const itemsList = Object.entries(cart)
+    .map(([name, price]) => `• ${name} - $${price}`)
+    .join('\n');
+
+  const total = Object.values(cart).reduce((sum, p) => sum + p, 0);
+
+  const message = `Call or message Aanya Sanghavi at +1 (347) 410-4301\n\nItems selected:\n${itemsList}\n\nTotal: $${total}`;
+
+  alert(message);
 };
 
 renderItems();
