@@ -55,11 +55,22 @@ h1 { font-size: 22px; margin: 0; }
 }
 
 .arrow {
-  position: absolute; top: 50%; transform: translateY(-50%);
-  background: rgba(255,255,255,0.8); cursor: pointer;
-  width: 18px; height: 18px; text-align: center;
-  line-height: 18px; border-radius: 50%; font-weight: bold;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.8);
+  cursor: pointer;
+  width: 30px;  /* increased clickable width */
+  height: 40px; /* increased clickable height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-weight: bold;
   user-select: none;
+  font-size: 14px;
+  color: #333;
+  z-index: 2;
 }
 
 .arrow-left { left: 5px; }

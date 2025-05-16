@@ -5,8 +5,7 @@ const ITEMS_DATA = [
     "price": 17,
     "description": "Compact air circulator fan, quiet and efficient.",
     "images": [
-      "items/Air circulator/alone.png",
-      "items/Air circulator/context.JPG"
+      "items/Air circulator/alone.png"
     ]
   },
   {
@@ -49,13 +48,13 @@ const ITEMS_DATA = [
     ]
   },
   {
-    "name": "Bedside tables with lamps",
+    "name": "Bedside tables",
     "category": "Bedroom",
     "price": 130,
     "description": "Set of bedside tables with lamps.",
     "images": [
-      "items/Bedside tables with lamps/IMG_2252 copy.JPG",
-      "items/Bedside tables with lamps/IMG_2253.JPG"
+      "items/Bedside tables/IMG_2252 copy.JPG",
+      "items/Bedside tables/IMG_2253.JPG"
     ]
   },
   {
@@ -147,7 +146,6 @@ const ITEMS_DATA = [
     "price": 30,
     "description": "Pelonis air circulator fan, powerful and quiet.",
     "images": [
-      "items/Fan/IMG_2253.JPG",
       "items/Fan/IMG_2257.JPG"
     ]
   },
@@ -180,9 +178,11 @@ const ITEMS_DATA = [
   {
     "name": "Humanscale office chair",
     "category": "Office",
-    "price": 1500,
-    "description": "Ergonomic Humanscale office chair, premium comfort.",
-    "images": []
+    "price": 700,
+    "description": "Ergonomic Humanscale office chair, premium comfort, bought for 1500",
+    "images": [
+      "items/Humanscale office chair/IMG_2241.JPG"
+    ]
   },
   {
     "name": "Kettle",
