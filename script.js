@@ -66,7 +66,7 @@ function updateCartSummary() {
   document.getElementById('item-count').innerText = Object.keys(cart).length + ' items';
 }
 
-function openFullscreen(images, startIndex) {
+function openFullscreen(images, startIndex, description) {
   let idx = startIndex;
   const fsDiv = document.createElement('div');
   fsDiv.className = 'fullscreen';
@@ -74,8 +74,9 @@ function openFullscreen(images, startIndex) {
   const renderFS = () => {
     fsDiv.innerHTML = `
       <img src="${images[idx]}">
-      <div class="arrow arrow-left">&#9664;</div>
-      <div class="arrow arrow-right">&#9654;</div>
+      <div class="fs-description">${description}</div>
+      ${images.length > 1 ? '<div class="arrow arrow-left">&#9664;</div>' : ''}
+      ${images.length > 1 ? '<div class="arrow arrow-right">&#9654;</div>' : ''}
     `;
   };
 
@@ -102,7 +103,7 @@ document.getElementById('buy-btn').onclick = () => {
 
   const total = Object.values(cart).reduce((sum, p) => sum + p, 0);
 
-  const message = `Call or message Aanya Sanghavi at +1 (347) 410-4301\n\nItems selected:\n${itemsList}\n\nTotal: $${total}`;
+  const message = `Call or message Aanya Sanghavi at +1 (347) 410-4301. Copy the message below and send it\n\nItems selected:\n${itemsList}\n\nTotal: $${total}`;
 
   alert(message);
 };
