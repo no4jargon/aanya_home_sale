@@ -33,7 +33,7 @@ function renderItems() {
           currentImgIndex = (currentImgIndex + 1) % item.images.length;
           itemDiv.querySelector('img').src = item.images[currentImgIndex];
         } else if(e.target.tagName === 'IMG') {
-          openFullscreen(item.images, currentImgIndex);
+          openFullscreen(item.images, currentImgIndex, item.description);
         } else {
           toggleCart(item.name, item.price, itemDiv);
         }
