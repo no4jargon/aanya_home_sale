@@ -1,5 +1,6 @@
 {
   "category": "Living room",
   "price": 50,
-  "description": "Matching light stand set, stylish and functional."
+  "description": "Matching light stand set, stylish and functional.",
+  "sold": false
 }

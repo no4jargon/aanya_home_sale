@@ -1,5 +1,6 @@
 {
   "category": "Bedroom",
   "description": "Pair of bedside lamps, soft lighting.",
-  "price": 50
+  "price": 50,
+  "sold": false
 }

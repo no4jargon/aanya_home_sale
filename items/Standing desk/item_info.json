@@ -1,5 +1,6 @@
 {
   "category": "Office",
   "price": 150,
-  "description": "Standing desk, adjustable height."
+  "description": "Standing desk, adjustable height.",
+  "sold": false
 }

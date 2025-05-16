@@ -1,5 +1,6 @@
 {
   "category": "Living room",
   "price": 30,
-  "description": "Woven cane basket, ideal for storage or decor."
+  "description": "Woven cane basket, ideal for storage or decor.",
+  "sold": false
 }

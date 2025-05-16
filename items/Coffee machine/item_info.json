@@ -1,5 +1,6 @@
 {
   "category": "Kitchen",
   "price": 130,
-  "description": "Coffee machine, makes delicious coffee."
+  "description": "Coffee machine, makes delicious coffee.",
+  "sold": false
 }

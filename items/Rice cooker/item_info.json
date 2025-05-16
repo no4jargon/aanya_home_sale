@@ -1,5 +1,6 @@
 {
   "category": "Kitchen",
   "price": 20,
-  "description": "Rice cooker, easy to use, perfect rice every time."
+  "description": "Rice cooker, easy to use, perfect rice every time.",
+  "sold": false
 }

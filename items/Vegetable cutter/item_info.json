@@ -1,5 +1,6 @@
 {
   "category": "Kitchen",
   "price": 20,
-  "description": "Vegetable cutter, saves prep time."
+  "description": "Vegetable cutter, saves prep time.",
+  "sold": false
 }

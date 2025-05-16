@@ -1,5 +1,6 @@
 {
   "category": "Office",
   "price": 30,
-  "description": "Footrest for under desk comfort."
+  "description": "Footrest for under desk comfort.",
+  "sold": false
 }

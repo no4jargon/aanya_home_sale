@@ -1,5 +1,6 @@
 {
   "category": "Bedroom",
   "price": 40,
-  "description": "Round wall mirror, modern design."
+  "description": "Round wall mirror, modern design.",
+  "sold": false
 }

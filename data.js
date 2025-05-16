@@ -6,7 +6,8 @@ const ITEMS_DATA = [
     "description": "Compact air circulator fan, quiet and efficient.",
     "images": [
       "items/Air circulator/alone.png"
-    ]
+    ],
+    "sold": false
   },
   {
     "name": "Air fryer",
@@ -16,7 +17,8 @@ const ITEMS_DATA = [
     "images": [
       "items/Air fryer/alone.JPG",
       "items/Air fryer/IMG_2254.JPG"
-    ]
+    ],
+    "sold": false
   },
   {
     "name": "Bar stools",
@@ -26,7 +28,8 @@ const ITEMS_DATA = [
     "images": [
       "items/Bar stools/IMG_2244.JPG",
       "items/Bar stools/IMG_2254.JPG"
-    ]
+    ],
+    "sold": false
   },
   {
     "name": "Bed frame",
@@ -35,7 +38,8 @@ const ITEMS_DATA = [
     "description": "Queen size bed frame, solid wood.",
     "images": [
       "items/Bed frame/IMG_2253.JPG"
-    ]
+    ],
+    "sold": false
   },
   {
     "name": "Bedside lamps",
@@ -45,7 +49,8 @@ const ITEMS_DATA = [
     "images": [
       "items/Bedside lamps/IMG_2252.JPG",
       "items/Bedside lamps/IMG_2253.JPG"
-    ]
+    ],
+    "sold": false
   },
   {
     "name": "Bedside tables",
@@ -55,7 +60,8 @@ const ITEMS_DATA = [
     "images": [
       "items/Bedside tables/IMG_2252 copy.JPG",
       "items/Bedside tables/IMG_2253.JPG"
-    ]
+    ],
+    "sold": false
   },
   {
     "name": "Bench",
@@ -64,7 +70,8 @@ const ITEMS_DATA = [
     "description": "Entryway bench, sturdy and comfortable.",
     "images": [
       "items/Bench/IMG_2242.JPG"
-    ]
+    ],
+    "sold": false
   },
   {
     "name": "Black and white rug",
@@ -73,7 +80,8 @@ const ITEMS_DATA = [
     "description": "Black and white patterned rug, stylish accent.",
     "images": [
       "items/Black and white rug/IMG_2242.JPG"
-    ]
+    ],
+    "sold": false
   },
   {
     "name": "Cane basket",
@@ -83,7 +91,8 @@ const ITEMS_DATA = [
     "images": [
       "items/Cane basket/IMG_2239.JPG",
       "items/Cane basket/IMG_2255.JPG"
-    ]
+    ],
+    "sold": false
   },
   {
     "name": "Chest of drawers with vanity stand",
@@ -92,7 +101,8 @@ const ITEMS_DATA = [
     "description": "Chest of drawers with attached vanity stand.",
     "images": [
       "items/Chest of drawers with vanity stand/IMG_2256.JPG"
-    ]
+    ],
+    "sold": false
   },
   {
     "name": "Circle mirror",
@@ -101,7 +111,8 @@ const ITEMS_DATA = [
     "description": "Round wall mirror, modern design.",
     "images": [
       "items/Circle mirror/IMG_2256 copy.JPG"
-    ]
+    ],
+    "sold": false
   },
   {
     "name": "Coffee machine",
@@ -113,7 +124,8 @@ const ITEMS_DATA = [
       "items/Coffee machine/IMG_2254.JPG",
       "items/Coffee machine/IMG_2256 copy.JPG",
       "items/Coffee machine/IMG_2256.JPG"
-    ]
+    ],
+    "sold": false
   },
   {
     "name": "Coffee table + side table",
@@ -125,7 +137,8 @@ const ITEMS_DATA = [
       "items/Coffee table + side table/IMG_2238.JPG",
       "items/Coffee table + side table/IMG_2240.JPG",
       "items/Coffee table + side table/IMG_2255.JPG"
-    ]
+    ],
+    "sold": false
   },
   {
     "name": "Fake plants",
@@ -139,7 +152,8 @@ const ITEMS_DATA = [
       "items/Fake plants/IMG_2245.jpg",
       "items/Fake plants/IMG_2252.JPG",
       "items/Fake plants/IMG_2256.JPG"
-    ]
+    ],
+    "sold": false
   },
   {
     "name": "Fan",
@@ -148,14 +162,16 @@ const ITEMS_DATA = [
     "description": "Pelonis air circulator fan, powerful and quiet.",
     "images": [
       "items/Fan/IMG_2257.JPG"
-    ]
+    ],
+    "sold": false
   },
   {
     "name": "Food warmer",
     "category": "Kitchen",
     "price": 40,
     "description": "Electric food warmer, keeps meals hot.",
-    "images": []
+    "images": [],
+    "sold": false
   },
   {
     "name": "Footrest",
@@ -164,7 +180,8 @@ const ITEMS_DATA = [
     "description": "Footrest for under desk comfort.",
     "images": [
       "items/Footrest/IMG_2241.JPG"
-    ]
+    ],
+    "sold": false
   },
   {
     "name": "Full length mirror",
@@ -174,7 +191,8 @@ const ITEMS_DATA = [
     "images": [
       "items/Full length mirror/IMG_2242 copy.JPG",
       "items/Full length mirror/IMG_2242.JPG"
-    ]
+    ],
+    "sold": false
   },
   {
     "name": "Humanscale office chair",
@@ -183,7 +201,8 @@ const ITEMS_DATA = [
     "description": "Ergonomic Humanscale office chair, premium comfort, bought for 1500",
     "images": [
       "items/Humanscale office chair/IMG_2241.JPG"
-    ]
+    ],
+    "sold": false
   },
   {
     "name": "Kettle",
@@ -193,7 +212,8 @@ const ITEMS_DATA = [
     "images": [
       "items/Kettle/IMG_2247.JPG",
       "items/Kettle/IMG_2254.JPG"
-    ]
+    ],
+    "sold": false
   },
   {
     "name": "Knife set",
@@ -203,7 +223,8 @@ const ITEMS_DATA = [
     "images": [
       "items/Knife set/IMG_2250.JPG",
       "items/Knife set/IMG_2254.JPG"
-    ]
+    ],
+    "sold": false
   },
   {
     "name": "Laundry basket",
@@ -212,7 +233,8 @@ const ITEMS_DATA = [
     "description": "Laundry basket, lightweight and durable.",
     "images": [
       "items/Laundry basket/IMG_2257.JPG"
-    ]
+    ],
+    "sold": false
   },
   {
     "name": "Light stand set",
@@ -223,7 +245,8 @@ const ITEMS_DATA = [
       "items/Light stand set/IMG_2233.JPG",
       "items/Light stand set/IMG_2236.JPG",
       "items/Light stand set/IMG_2255.JPG"
-    ]
+    ],
+    "sold": false
   },
   {
     "name": "Living room rug",
@@ -233,7 +256,8 @@ const ITEMS_DATA = [
     "images": [
       "items/Living room rug/IMG_2240.JPG",
       "items/Living room rug/IMG_2255.JPG"
-    ]
+    ],
+    "sold": false
   },
   {
     "name": "Mattress with pillows and protector",
@@ -242,21 +266,24 @@ const ITEMS_DATA = [
     "description": "Queen mattress with pillows and protector, very comfortable.",
     "images": [
       "items/Mattress with pillows and protector/IMG_2253.JPG"
-    ]
+    ],
+    "sold": false
   },
   {
     "name": "Nutribullet",
     "category": "Kitchen",
     "price": 21,
     "description": "Nutribullet blender, great for smoothies.",
-    "images": []
+    "images": [],
+    "sold": false
   },
   {
     "name": "Rice cooker",
     "category": "Kitchen",
     "price": 20,
     "description": "Rice cooker, easy to use, perfect rice every time.",
-    "images": []
+    "images": [],
+    "sold": false
   },
   {
     "name": "Shoe rack",
@@ -265,7 +292,8 @@ const ITEMS_DATA = [
     "description": "Compact shoe rack, holds multiple pairs.",
     "images": [
       "items/Shoe rack/IMG_2243.JPG"
-    ]
+    ],
+    "sold": false
   },
   {
     "name": "Standing desk",
@@ -275,7 +303,8 @@ const ITEMS_DATA = [
     "images": [
       "items/Standing desk/IMG_2241.JPG",
       "items/Standing desk/IMG_2255.JPG"
-    ]
+    ],
+    "sold": false
   },
   {
     "name": "TV",
@@ -285,7 +314,8 @@ const ITEMS_DATA = [
     "images": [
       "items/TV/IMG_2232.JPG",
       "items/TV/IMG_2255.JPG"
-    ]
+    ],
+    "sold": false
   },
   {
     "name": "TV console",
@@ -295,7 +325,8 @@ const ITEMS_DATA = [
     "images": [
       "items/TV console/IMG_2235.JPG",
       "items/TV console/IMG_2255.JPG"
-    ]
+    ],
+    "sold": false
   },
   {
     "name": "Toaster",
@@ -305,7 +336,8 @@ const ITEMS_DATA = [
     "images": [
       "items/Toaster/IMG_2248.JPG",
       "items/Toaster/IMG_2254.JPG"
-    ]
+    ],
+    "sold": false
   },
   {
     "name": "Vacuum",
@@ -314,13 +346,15 @@ const ITEMS_DATA = [
     "description": "Vacuum cleaner, powerful suction.",
     "images": [
       "items/Vacuum/IMG_2242.JPG"
-    ]
+    ],
+    "sold": false
   },
   {
     "name": "Vegetable cutter",
     "category": "Kitchen",
     "price": 20,
     "description": "Vegetable cutter, saves prep time.",
-    "images": []
+    "images": [],
+    "sold": false
   }
 ]

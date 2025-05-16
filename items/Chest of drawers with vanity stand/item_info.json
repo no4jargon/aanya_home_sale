@@ -1,5 +1,6 @@
 {
   "category": "Bedroom",
   "price": 120,
-  "description": "Chest of drawers with attached vanity stand."
+  "description": "Chest of drawers with attached vanity stand.",
+  "sold": false
 }

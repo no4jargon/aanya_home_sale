@@ -1,5 +1,6 @@
 {
   "category": "Living room",
   "price": 70,
-  "description": "Soft living room rug, neutral color, gently used."
+  "description": "Soft living room rug, neutral color, gently used.",
+  "sold": false
 }

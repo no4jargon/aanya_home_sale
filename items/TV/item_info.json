@@ -1,5 +1,6 @@
 {
   "category": "Living room",
   "price": 200,
-  "description": "Flat screen TV, excellent condition."
+  "description": "Flat screen TV, excellent condition.",
+  "sold": false
 }

@@ -100,3 +100,17 @@ h1 { font-size: 22px; margin: 0; }
   text-align: center;
   font-size: 16px;
 }
+
+.sold-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(255,255,255,0.8);
+  color: red;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  pointer-events: none;
+}

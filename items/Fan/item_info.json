@@ -1,5 +1,6 @@
 {
   "category": "Bedroom",
   "price": 30,
-  "description": "Pelonis air circulator fan, powerful and quiet."
+  "description": "Pelonis air circulator fan, powerful and quiet.",
+  "sold": false
 }

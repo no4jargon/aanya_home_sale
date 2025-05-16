@@ -1,5 +1,6 @@
 {
   "category": "Household stuff",
   "price": 100,
-  "description": "Set of bar stools, modern design."
+  "description": "Set of bar stools, modern design.",
+  "sold": false
 }

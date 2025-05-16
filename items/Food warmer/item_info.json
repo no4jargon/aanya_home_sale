@@ -1,5 +1,6 @@
 {
   "category": "Kitchen",
   "description": "Electric food warmer, keeps meals hot.",
-  "price": 40
+  "price": 40,
+  "sold": false
 }

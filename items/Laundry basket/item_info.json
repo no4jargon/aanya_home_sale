@@ -1,5 +1,6 @@
 {
   "category": "Bedroom",
   "price": 10,
-  "description": "Laundry basket, lightweight and durable."
+  "description": "Laundry basket, lightweight and durable.",
+  "sold": false
 }

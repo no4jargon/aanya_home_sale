@@ -1,5 +1,6 @@
 {
   "category": "Entryway",
   "price": 25,
-  "description": "Black and white patterned rug, stylish accent."
+  "description": "Black and white patterned rug, stylish accent.",
+  "sold": false
 }

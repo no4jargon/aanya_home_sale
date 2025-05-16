@@ -30,7 +30,8 @@ for item_folder in sorted(os.listdir(base_dir)):
                     "category": item_info['category'],
                     "price": item_info['price'],
                     "description": item_info['description'],
-                    "images": ordered_imgs
+                    "images": ordered_imgs,
+                    "sold": item_info['sold']
                 })
         except KeyError as e:
             print(f"Error processing {item_folder}: {e}")

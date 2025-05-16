@@ -1,5 +1,6 @@
 {
   "category": "Entryway",
   "price": 60,
-  "description": "Full length mirror, perfect for entryway or bedroom."
+  "description": "Full length mirror, perfect for entryway or bedroom.",
+  "sold": false
 }

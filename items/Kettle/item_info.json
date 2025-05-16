@@ -1,5 +1,6 @@
 {
   "category": "Kitchen",
   "price": 18,
-  "description": "Electric kettle, boils water quickly."
+  "description": "Electric kettle, boils water quickly.",
+  "sold": false
 }

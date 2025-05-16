@@ -1,5 +1,6 @@
 {
   "category": "Kitchen",
   "price": 15,
-  "description": "Toaster, works perfectly."
+  "description": "Toaster, works perfectly.",
+  "sold": false
 }

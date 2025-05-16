@@ -18,12 +18,13 @@ function renderItems() {
 
       itemDiv.innerHTML = `
         <div class="tick">✓</div>
+        ${item.sold ? '<div class="sold-overlay">SOLD</div>' : ''}
         <img src="${item.images[0]}">
         ${hasMultipleImages ? '<div class="arrow arrow-left">&#9664;</div>' : ''}
         ${hasMultipleImages ? '<div class="arrow arrow-right">&#9654;</div>' : ''}
         <div class="name">${item.name}</div>
         <div class="price">$${item.price}</div>
-      `;
+        `;
 
       itemDiv.onclick = (e) => {
         if(e.target.classList.contains('arrow-left')) {

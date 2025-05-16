@@ -1,5 +1,6 @@
 {
   "category": "Household stuff",
   "price": 150,
-  "description": "Vacuum cleaner, powerful suction."
+  "description": "Vacuum cleaner, powerful suction.",
+  "sold": false
 }

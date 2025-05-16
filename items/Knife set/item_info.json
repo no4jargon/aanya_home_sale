@@ -1,5 +1,6 @@
 {
   "category": "Kitchen",
   "price": 10,
-  "description": "Set of kitchen knives, sharp and reliable."
+  "description": "Set of kitchen knives, sharp and reliable.",
+  "sold": false
 }

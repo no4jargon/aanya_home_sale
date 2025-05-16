@@ -1,5 +1,6 @@
 {
   "category": "Bedroom",
   "price": 370,
-  "description": "Queen size bed frame, solid wood."
+  "description": "Queen size bed frame, solid wood.",
+  "sold": false
 }

@@ -1,5 +1,6 @@
 {
   "category": "Entryway",
   "price": 70,
-  "description": "Entryway bench, sturdy and comfortable."
+  "description": "Entryway bench, sturdy and comfortable.",
+  "sold": false
 }
