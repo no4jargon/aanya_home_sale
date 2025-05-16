@@ -40,10 +40,18 @@ h1 { font-size: 22px; margin: 0; }
 }
 
 .tick {
-  position: absolute; top: 5px; right: 5px;
-  background: green; color: white; border-radius: 50%;
-  width: 20px; height: 20px; line-height: 20px;
-  text-align: center; font-size: 14px; display: none;
+  position: absolute;
+  top: 5px;
+  left: 5px; /* changed from right to left */
+  background: green;
+  color: white;
+  border-radius: 50%;
+  width: 20px; height: 20px;
+  line-height: 20px;
+  text-align: center;
+  font-size: 14px;
+  display: none;
+  z-index: 2; /* ensure it's above images */
 }
 
 .arrow {
