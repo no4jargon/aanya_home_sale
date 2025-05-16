@@ -15,24 +15,26 @@ function renderItems() {
       
       let currentImgIndex = 0;
       itemDiv.innerHTML = `
-        <img src="${item.images[0]}" alt="${item.name}">
+        <div class="tick">✓</div>
+        <img src="${item.images[0]}">
+        <div class="arrow arrow-left">&#9664;</div>
+        <div class="arrow arrow-right">&#9654;</div>
         <div class="name">${item.name}</div>
-        <div class="description">${item.description}</div>
         <div class="price">$${item.price}</div>
       `;
 
       itemDiv.onclick = (e) => {
-        if(e.target.tagName === 'IMG') {
-          openFullscreen(item.images[currentImgIndex]);
+        if(e.target.classList.contains('arrow-left')) {
+          currentImgIndex = (currentImgIndex - 1 + item.images.length) % item.images.length;
+          itemDiv.querySelector('img').src = item.images[currentImgIndex];
+        } else if(e.target.classList.contains('arrow-right')) {
+          currentImgIndex = (currentImgIndex + 1) % item.images.length;
+          itemDiv.querySelector('img').src = item.images[currentImgIndex];
+        } else if(e.target.tagName === 'IMG') {
+          openFullscreen(item.images, currentImgIndex);
         } else {
           toggleCart(item.name, item.price, itemDiv);
         }
-      };
-
-      itemDiv.oncontextmenu = (e) => {
-        e.preventDefault();
-        currentImgIndex = (currentImgIndex + 1) % item.images.length;
-        itemDiv.querySelector('img').src = item.images[currentImgIndex];
       };
 
       catDiv.querySelector('.items').appendChild(itemDiv);
@@ -59,14 +61,40 @@ function toggleCart(name, price, el) {
 function updateCartSummary() {
   const total = Object.values(cart).reduce((sum, p) => sum + p, 0);
   document.getElementById('total-price').innerText = total;
+  document.getElementById('item-count').innerText = Object.keys(cart).length + ' items';
 }
 
-function openFullscreen(src) {
+function openFullscreen(images, startIndex) {
+  let idx = startIndex;
   const fsDiv = document.createElement('div');
   fsDiv.className = 'fullscreen';
-  fsDiv.innerHTML = `<img src="${src}">`;
+
+  const renderFS = () => {
+    fsDiv.innerHTML = `
+      <img src="${images[idx]}">
+      <div class="arrow arrow-left">&#9664;</div>
+      <div class="arrow arrow-right">&#9654;</div>
+    `;
+  };
+
+  fsDiv.onclick = (e) => {
+    if(e.target.classList.contains('arrow-left')) {
+      idx = (idx - 1 + images.length) % images.length;
+      renderFS();
+    } else if(e.target.classList.contains('arrow-right')) {
+      idx = (idx + 1) % images.length;
+      renderFS();
+    } else {
+      document.body.removeChild(fsDiv);
+    }
+  };
+
+  renderFS();
   document.body.appendChild(fsDiv);
-  fsDiv.onclick = () => document.body.removeChild(fsDiv);
 }
+
+document.getElementById('buy-btn').onclick = () => {
+  alert('📞 Call Aanya Sanghavi at +1 (347) 410-4301');
+};
 
 renderItems();
