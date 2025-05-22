@@ -2,8 +2,8 @@ const ITEMS_DATA = [
   {
     "name": "Air circulator",
     "category": "Bedroom",
-    "price": 17,
-    "description": "Compact air circulator fan, quiet and efficient.",
+    "price": 10,
+    "description": "Pelonis air circulator fan, powerful and quiet.",
     "images": [
       "items/Air circulator/alone.png"
     ],
@@ -12,7 +12,7 @@ const ITEMS_DATA = [
   {
     "name": "Air fryer",
     "category": "Kitchen",
-    "price": 100,
+    "price": 70,
     "description": "Air fryer, lightly used, cooks healthy meals.",
     "images": [
       "items/Air fryer/alone.JPG",
@@ -23,7 +23,7 @@ const ITEMS_DATA = [
   {
     "name": "Bar stools",
     "category": "Household stuff",
-    "price": 100,
+    "price": 50,
     "description": "Set of bar stools, modern design.",
     "images": [
       "items/Bar stools/IMG_2244.JPG",
@@ -34,8 +34,8 @@ const ITEMS_DATA = [
   {
     "name": "Bed frame",
     "category": "Bedroom",
-    "price": 370,
-    "description": "Queen size bed frame, solid wood.",
+    "price": 200,
+    "description": "King size bed frame, solid wood.",
     "images": [
       "items/Bed frame/IMG_2253.JPG"
     ],
@@ -44,7 +44,7 @@ const ITEMS_DATA = [
   {
     "name": "Bedside lamps",
     "category": "Bedroom",
-    "price": 50,
+    "price": 30,
     "description": "Pair of bedside lamps, soft lighting.",
     "images": [
       "items/Bedside lamps/IMG_2252.JPG",
@@ -55,8 +55,8 @@ const ITEMS_DATA = [
   {
     "name": "Bedside tables",
     "category": "Bedroom",
-    "price": 130,
-    "description": "Set of bedside tables with lamps.",
+    "price": 60,
+    "description": "Set of bedside tables.",
     "images": [
       "items/Bedside tables/IMG_2252 copy.JPG",
       "items/Bedside tables/IMG_2253.JPG"
@@ -66,8 +66,8 @@ const ITEMS_DATA = [
   {
     "name": "Bench",
     "category": "Entryway",
-    "price": 70,
-    "description": "Entryway bench, sturdy and comfortable.",
+    "price": 40,
+    "description": "Entryway wooden bench, stylish, sturdy and comfortable.",
     "images": [
       "items/Bench/IMG_2242.JPG"
     ],
@@ -86,7 +86,7 @@ const ITEMS_DATA = [
   {
     "name": "Cane basket",
     "category": "Living room",
-    "price": 30,
+    "price": 20,
     "description": "Woven cane basket, ideal for storage or decor.",
     "images": [
       "items/Cane basket/IMG_2239.JPG",
@@ -97,7 +97,7 @@ const ITEMS_DATA = [
   {
     "name": "Chest of drawers with vanity stand",
     "category": "Bedroom",
-    "price": 120,
+    "price": 80,
     "description": "Chest of drawers with attached vanity stand.",
     "images": [
       "items/Chest of drawers with vanity stand/IMG_2256.JPG"
@@ -107,7 +107,7 @@ const ITEMS_DATA = [
   {
     "name": "Circle mirror",
     "category": "Bedroom",
-    "price": 40,
+    "price": 10,
     "description": "Round wall mirror, modern design.",
     "images": [
       "items/Circle mirror/IMG_2256 copy.JPG"
@@ -117,7 +117,7 @@ const ITEMS_DATA = [
   {
     "name": "Coffee machine",
     "category": "Kitchen",
-    "price": 130,
+    "price": 100,
     "description": "Coffee machine, makes delicious coffee.",
     "images": [
       "items/Coffee machine/IMG_2246.JPG",
@@ -130,7 +130,7 @@ const ITEMS_DATA = [
   {
     "name": "Coffee table + side table",
     "category": "Living room",
-    "price": 70,
+    "price": 50,
     "description": "Set of coffee table and side table, modern and sturdy.",
     "images": [
       "items/Coffee table + side table/IMG_2237.JPG",
@@ -143,7 +143,7 @@ const ITEMS_DATA = [
   {
     "name": "Fake plants",
     "category": "Entryway",
-    "price": 10,
+    "price": 0,
     "description": "Decorative fake plants for a fresh look.",
     "images": [
       "items/Fake plants/IMG_2233.JPG",
@@ -158,8 +158,8 @@ const ITEMS_DATA = [
   {
     "name": "Fan",
     "category": "Bedroom",
-    "price": 30,
-    "description": "Pelonis air circulator fan, powerful and quiet.",
+    "price": 15,
+    "description": "Honeywell fan, powerful and quiet.",
     "images": [
       "items/Fan/IMG_2257.JPG"
     ],
@@ -169,15 +169,15 @@ const ITEMS_DATA = [
     "name": "Food warmer",
     "category": "Kitchen",
     "price": 40,
-    "description": "Electric food warmer, keeps meals hot.",
+    "description": "Electric food warmer, keeps meals hot. Super useful for people cook their own meals.",
     "images": [],
     "sold": false
   },
   {
     "name": "Footrest",
     "category": "Office",
-    "price": 30,
-    "description": "Footrest for under desk comfort.",
+    "price": 0,
+    "description": "Footrest for under desk comfort",
     "images": [
       "items/Footrest/IMG_2241.JPG"
     ],
@@ -186,8 +186,8 @@ const ITEMS_DATA = [
   {
     "name": "Full length mirror",
     "category": "Entryway",
-    "price": 60,
-    "description": "Full length mirror, perfect for entryway or bedroom.",
+    "price": 20,
+    "description": "Nice modern full length mirror, perfect for entryway or bedroom.",
     "images": [
       "items/Full length mirror/IMG_2242 copy.JPG",
       "items/Full length mirror/IMG_2242.JPG"
@@ -207,8 +207,8 @@ const ITEMS_DATA = [
   {
     "name": "Kettle",
     "category": "Kitchen",
-    "price": 18,
-    "description": "Electric kettle, boils water quickly.",
+    "price": 10,
+    "description": "Nice transparent electric kettle, boils water quickly.",
     "images": [
       "items/Kettle/IMG_2247.JPG",
       "items/Kettle/IMG_2254.JPG"
@@ -218,7 +218,7 @@ const ITEMS_DATA = [
   {
     "name": "Knife set",
     "category": "Kitchen",
-    "price": 10,
+    "price": 0,
     "description": "Set of kitchen knives, sharp and reliable.",
     "images": [
       "items/Knife set/IMG_2250.JPG",
@@ -229,7 +229,7 @@ const ITEMS_DATA = [
   {
     "name": "Laundry basket",
     "category": "Bedroom",
-    "price": 10,
+    "price": 0,
     "description": "Laundry basket, lightweight and durable.",
     "images": [
       "items/Laundry basket/IMG_2257.JPG"
@@ -239,7 +239,7 @@ const ITEMS_DATA = [
   {
     "name": "Light stand set",
     "category": "Living room",
-    "price": 50,
+    "price": 40,
     "description": "Matching light stand set, stylish and functional.",
     "images": [
       "items/Light stand set/IMG_2233.JPG",
@@ -251,7 +251,7 @@ const ITEMS_DATA = [
   {
     "name": "Living room rug",
     "category": "Living room",
-    "price": 70,
+    "price": 40,
     "description": "Soft living room rug, neutral color, gently used.",
     "images": [
       "items/Living room rug/IMG_2240.JPG",
@@ -262,8 +262,8 @@ const ITEMS_DATA = [
   {
     "name": "Mattress with pillows and protector",
     "category": "Bedroom",
-    "price": 450,
-    "description": "Queen mattress with pillows and protector, very comfortable.",
+    "price": 200,
+    "description": "King mattress with pillows and protector, very comfortable.",
     "images": [
       "items/Mattress with pillows and protector/IMG_2253.JPG"
     ],
@@ -272,8 +272,8 @@ const ITEMS_DATA = [
   {
     "name": "Nutribullet",
     "category": "Kitchen",
-    "price": 21,
-    "description": "Nutribullet blender, great for smoothies.",
+    "price": 15,
+    "description": "Nutribullet blender, great for smoothies & hummus!!",
     "images": [],
     "sold": false
   },
@@ -288,7 +288,7 @@ const ITEMS_DATA = [
   {
     "name": "Shoe rack",
     "category": "Entryway",
-    "price": 15,
+    "price": 0,
     "description": "Compact shoe rack, holds multiple pairs.",
     "images": [
       "items/Shoe rack/IMG_2243.JPG"
@@ -298,8 +298,8 @@ const ITEMS_DATA = [
   {
     "name": "Standing desk",
     "category": "Office",
-    "price": 150,
-    "description": "Standing desk, adjustable height.",
+    "price": 100,
+    "description": "Premimum wooden desk, adjustable height.",
     "images": [
       "items/Standing desk/IMG_2241.JPG",
       "items/Standing desk/IMG_2255.JPG"
@@ -309,8 +309,8 @@ const ITEMS_DATA = [
   {
     "name": "TV",
     "category": "Living room",
-    "price": 200,
-    "description": "Flat screen TV, excellent condition.",
+    "price": 100,
+    "description": "Flat screen TCL-Roku TV, excellent condition.",
     "images": [
       "items/TV/IMG_2232.JPG",
       "items/TV/IMG_2255.JPG"
@@ -320,8 +320,8 @@ const ITEMS_DATA = [
   {
     "name": "TV console",
     "category": "Living room",
-    "price": 50,
-    "description": "TV console with storage, fits most TVs.",
+    "price": 40,
+    "description": "Nice dark wood TV console with storage, fits most TVs. goes with th ecenter table",
     "images": [
       "items/TV console/IMG_2235.JPG",
       "items/TV console/IMG_2255.JPG"
@@ -331,7 +331,7 @@ const ITEMS_DATA = [
   {
     "name": "Toaster",
     "category": "Kitchen",
-    "price": 15,
+    "price": 0,
     "description": "Toaster, works perfectly.",
     "images": [
       "items/Toaster/IMG_2248.JPG",
@@ -342,8 +342,8 @@ const ITEMS_DATA = [
   {
     "name": "Vacuum",
     "category": "Household stuff",
-    "price": 150,
-    "description": "Vacuum cleaner, powerful suction.",
+    "price": 60,
+    "description": "Shark vacuum cleaner, powerful suction.",
     "images": [
       "items/Vacuum/IMG_2242.JPG"
     ],
@@ -352,7 +352,7 @@ const ITEMS_DATA = [
   {
     "name": "Vegetable cutter",
     "category": "Kitchen",
-    "price": 20,
+    "price": 0,
     "description": "Vegetable cutter, saves prep time.",
     "images": [],
     "sold": false
