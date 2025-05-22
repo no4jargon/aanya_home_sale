@@ -61,12 +61,16 @@ function renderCategory(categoryTitle, items) {
 }
 
 function toggleCart(name, price, el) {
-  if(cart[name]) {
+  if (cart[name]) {
     delete cart[name];
-    el.classList.remove('cart-selected');
+    document.querySelectorAll(`.item`).forEach(div => {
+      if (div.querySelector('.name').innerText === name) div.classList.remove('cart-selected');
+    });
   } else {
     cart[name] = price;
-    el.classList.add('cart-selected');
+    document.querySelectorAll(`.item`).forEach(div => {
+      if (div.querySelector('.name').innerText === name) div.classList.add('cart-selected');
+    });
   }
   localStorage.setItem('cart', JSON.stringify(cart));
   updateCartSummary();
