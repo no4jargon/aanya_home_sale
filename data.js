@@ -107,7 +107,7 @@ const ITEMS_DATA = [
   {
     "name": "Circle mirror",
     "category": "Bedroom",
-    "price": 10,
+    "price": 0,
     "description": "Round wall mirror, modern design.",
     "images": [
       "items/Circle mirror/IMG_2256 copy.JPG"
@@ -197,7 +197,7 @@ const ITEMS_DATA = [
   {
     "name": "Humanscale office chair",
     "category": "Office",
-    "price": 700,
+    "price": 250,
     "description": "Ergonomic Humanscale office chair, premium comfort, bought for 1500",
     "images": [
       "items/Humanscale office chair/IMG_2241.JPG"
