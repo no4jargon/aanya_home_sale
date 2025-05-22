@@ -61,7 +61,7 @@ function renderCategory(categoryTitle, items) {
 }
 
 function toggleCart(name, price, el) {
-  if (cart[name]) {
+  if (name in cart) {
     delete cart[name];
     document.querySelectorAll(`.item`).forEach(div => {
       if (div.querySelector('.name').innerText === name) div.classList.remove('cart-selected');
