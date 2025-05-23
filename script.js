@@ -79,20 +79,27 @@ function openFullscreen(images, idx, description) {
   const fsDiv = document.createElement('div');
   fsDiv.className = 'fullscreen';
 
-  const render = () => {
-    fsDiv.innerHTML = `<img src="${images[idx]}"><div class="fs-description">${description}</div>`;
+  const renderFS = () => {
+    fsDiv.innerHTML = `
+      <div class="close-btn">✕</div>
+      <img src="${images[idx]}">
+      <div class="fs-description">${description}</div>
+    `;
   };
 
-  fsDiv.onclick = (e) => {
-    idx = (e.clientX < window.innerWidth / 2)
-      ? (idx - 1 + images.length) % images.length
-      : (idx + 1) % images.length;
-    render();
+  fsDiv.onclick = e => {
+    if (e.target.classList.contains('close-btn') || e.target === fsDiv) {
+      document.body.removeChild(fsDiv);
+    } else if (e.target.tagName === 'IMG') {
+      const rect = e.target.getBoundingClientRect();
+      const clickX = e.clientX - rect.left;
+      if (clickX < rect.width / 2) idx = (idx - 1 + images.length) % images.length;
+      else idx = (idx + 1) % images.length;
+      renderFS();
+    }
   };
 
-  fsDiv.ondblclick = () => document.body.removeChild(fsDiv);
-
-  render();
+  renderFS();
   document.body.appendChild(fsDiv);
 }
 
