@@ -114,4 +114,5 @@ document.getElementById('buy-btn').onclick = () => {
   alert(`Call or message Aanya Sanghavi at +1 (347) 410-4301.\n\nItems selected:\n${itemsList}\n\nTotal: $${total}`);
 };
 
-renderItems();
+// Display items sorted by price (low to high) by default
+renderItems('price');
