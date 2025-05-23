@@ -84,7 +84,9 @@ h1 { font-size: 22px; margin: 0; }
 }
 
 .fullscreen img {
-  max-width: 90%; max-height: 90%;
+  max-width: 90%;
+  max-height: 90%;
+  cursor: pointer;
 }
 
 #buy-btn { padding: 6px 10px; }

@@ -91,22 +91,22 @@ function openFullscreen(images, startIndex, description) {
     fsDiv.innerHTML = `
       <img src="${images[idx]}">
       <div class="fs-description">${description}</div>
-      ${images.length > 1 ? '<div class="arrow arrow-left">&#9664;</div>' : ''}
-      ${images.length > 1 ? '<div class="arrow arrow-right">&#9654;</div>' : ''}
     `;
   };
 
   fsDiv.onclick = (e) => {
-    if(e.target.classList.contains('arrow-left')) {
+    const clickX = e.clientX;
+    const screenWidth = window.innerWidth;
+
+    if (clickX < screenWidth / 2) { // left half
       idx = (idx - 1 + images.length) % images.length;
-      renderFS();
-    } else if(e.target.classList.contains('arrow-right')) {
+    } else { // right half
       idx = (idx + 1) % images.length;
-      renderFS();
-    } else {
-      document.body.removeChild(fsDiv);
     }
+    renderFS();
   };
+
+  fsDiv.ondblclick = () => document.body.removeChild(fsDiv); // double-tap to close
 
   renderFS();
   document.body.appendChild(fsDiv);
