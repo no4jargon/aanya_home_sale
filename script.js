@@ -25,7 +25,7 @@ function renderCategory(categoryTitle, items) {
 
   items.forEach(item => {
     const itemDiv = document.createElement('div');
-    itemDiv.className = `item${cart[item.name] ? ' cart-selected' : ''}`;
+    itemDiv.className = `item${item.name in cart ? ' cart-selected' : ''}`;
     
     let currentImgIndex = 0;
     const hasMultipleImages = item.images.length > 1;
