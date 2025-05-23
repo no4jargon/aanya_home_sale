@@ -3,125 +3,104 @@ let cart = JSON.parse(localStorage.getItem('cart')) || {};
 function renderItems(mode = 'category') {
   document.getElementById('categories').innerHTML = '';
 
-  let sortedItems;
   if (mode === 'price') {
-    sortedItems = [...ITEMS_DATA].sort((a, b) => a.price - b.price);
+    const sortedItems = [...ITEMS_DATA].sort((a, b) => a.price - b.price);
     renderCategory('All Items (Low → High)', sortedItems);
   } else {
     const categories = [...new Set(ITEMS_DATA.map(i => i.category))];
-    categories.forEach(category => {
-      const itemsInCat = ITEMS_DATA.filter(i => i.category === category);
-      renderCategory(category, itemsInCat);
+    categories.forEach(cat => {
+      renderCategory(cat, ITEMS_DATA.filter(i => i.category === cat));
     });
   }
-
   updateCartSummary();
 }
 
-function renderCategory(categoryTitle, items) {
+function renderCategory(title, items) {
   const catDiv = document.createElement('div');
   catDiv.className = 'category';
-  catDiv.innerHTML = `<h3>${categoryTitle}</h3><div class="items"></div>`;
+  catDiv.innerHTML = `<h3>${title}</h3><div class="items"></div>`;
 
   items.forEach(item => {
-    const itemDiv = document.createElement('div');
-    itemDiv.className = `item${item.name in cart ? ' cart-selected' : ''}`;
-    
-    let currentImgIndex = 0;
-    const hasMultipleImages = item.images.length > 1;
+    const div = document.createElement('div');
+    div.className = `item${item.name in cart ? ' cart-selected' : ''}`;
 
-    itemDiv.innerHTML = `
+    let idx = 0;
+    div.innerHTML = `
       <div class="tick">✓</div>
       ${item.sold ? '<div class="sold-overlay">SOLD</div>' : ''}
       <img src="${item.images[0]}">
-      ${hasMultipleImages ? '<div class="arrow arrow-left">&#9664;</div>' : ''}
-      ${hasMultipleImages ? '<div class="arrow arrow-right">&#9654;</div>' : ''}
+      ${item.images.length > 1 ? `
+        <div class="arrow arrow-left">&#9664;</div>
+        <div class="arrow arrow-right">&#9654;</div>` : ''}
       <div class="name">${item.name}</div>
       <div class="price">$${item.price}</div>
     `;
 
-    itemDiv.onclick = (e) => {
-      if(e.target.classList.contains('arrow-left')) {
-        currentImgIndex = (currentImgIndex - 1 + item.images.length) % item.images.length;
-        itemDiv.querySelector('img').src = item.images[currentImgIndex];
-      } else if(e.target.classList.contains('arrow-right')) {
-        currentImgIndex = (currentImgIndex + 1) % item.images.length;
-        itemDiv.querySelector('img').src = item.images[currentImgIndex];
-      } else if(e.target.tagName === 'IMG') {
-        openFullscreen(item.images, currentImgIndex, item.description);
+    div.onclick = (e) => {
+      if (e.target.classList.contains('arrow-left')) {
+        idx = (idx - 1 + item.images.length) % item.images.length;
+        div.querySelector('img').src = item.images[idx];
+      } else if (e.target.classList.contains('arrow-right')) {
+        idx = (idx + 1) % item.images.length;
+        div.querySelector('img').src = item.images[idx];
+      } else if (e.target.tagName === 'IMG') {
+        openFullscreen(item.images, idx, item.description);
       } else {
-        toggleCart(item.name, item.price, itemDiv);
+        toggleCart(item.name, item.price);
       }
     };
 
-    catDiv.querySelector('.items').appendChild(itemDiv);
+    catDiv.querySelector('.items').appendChild(div);
   });
 
   document.getElementById('categories').appendChild(catDiv);
 }
 
-function toggleCart(name, price, el) {
-  if (name in cart) {
-    delete cart[name];
-    document.querySelectorAll(`.item`).forEach(div => {
-      if (div.querySelector('.name').innerText === name) div.classList.remove('cart-selected');
-    });
-  } else {
-    cart[name] = price;
-    document.querySelectorAll(`.item`).forEach(div => {
-      if (div.querySelector('.name').innerText === name) div.classList.add('cart-selected');
-    });
-  }
+function toggleCart(name, price) {
+  if (name in cart) delete cart[name];
+  else cart[name] = price;
+
+  document.querySelectorAll('.item').forEach(div => {
+    if (div.querySelector('.name').innerText === name)
+      div.classList.toggle('cart-selected', name in cart);
+  });
+
   localStorage.setItem('cart', JSON.stringify(cart));
   updateCartSummary();
 }
 
 function updateCartSummary() {
-  const total = Object.values(cart).reduce((sum, p) => sum + p, 0);
+  const total = Object.values(cart).reduce((a, b) => a + b, 0);
   document.getElementById('total-price').innerText = total;
-  document.getElementById('item-count').innerText = Object.keys(cart).length + ' items';
+  document.getElementById('item-count').innerText = `${Object.keys(cart).length} items`;
 }
 
-function openFullscreen(images, startIndex, description) {
-  let idx = startIndex;
+function openFullscreen(images, idx, description) {
   const fsDiv = document.createElement('div');
   fsDiv.className = 'fullscreen';
 
-  const renderFS = () => {
-    fsDiv.innerHTML = `
-      <img src="${images[idx]}">
-      <div class="fs-description">${description}</div>
-    `;
+  const render = () => {
+    fsDiv.innerHTML = `<img src="${images[idx]}"><div class="fs-description">${description}</div>`;
   };
 
   fsDiv.onclick = (e) => {
-    const clickX = e.clientX;
-    const screenWidth = window.innerWidth;
-
-    if (clickX < screenWidth / 2) { // left half
-      idx = (idx - 1 + images.length) % images.length;
-    } else { // right half
-      idx = (idx + 1) % images.length;
-    }
-    renderFS();
+    idx = (e.clientX < window.innerWidth / 2)
+      ? (idx - 1 + images.length) % images.length
+      : (idx + 1) % images.length;
+    render();
   };
 
-  fsDiv.ondblclick = () => document.body.removeChild(fsDiv); // double-tap to close
+  fsDiv.ondblclick = () => document.body.removeChild(fsDiv);
 
-  renderFS();
+  render();
   document.body.appendChild(fsDiv);
 }
 
 document.getElementById('buy-btn').onclick = () => {
   const itemsList = Object.entries(cart)
-    .map(([name, price]) => `• ${name} - $${price}`)
-    .join('\n');
-
+    .map(([name, price]) => `• ${name} - $${price}`).join('\n');
   const total = Object.values(cart).reduce((sum, p) => sum + p, 0);
-
-  const message = `Call or message Aanya Sanghavi at +1 (347) 410-4301. Copy the message below and send it\n\nItems selected:\n${itemsList}\n\nTotal: $${total}`;
-
-  alert(message);
+  alert(`Call or message Aanya Sanghavi at +1 (347) 410-4301.\n\nItems selected:\n${itemsList}\n\nTotal: $${total}`);
 };
 
 renderItems();
