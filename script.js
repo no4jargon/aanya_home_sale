@@ -25,10 +25,14 @@ function renderCategory(title, items) {
     div.className = `item${item.name in cart ? ' cart-selected' : ''}`;
 
     let idx = 0;
+    const imagePart = item.images.length > 0 ?
+      `<img src="${item.images[0]}">` :
+      '<div class="no-image">No image</div>';
+
     div.innerHTML = `
       <div class="tick">✓</div>
       ${item.sold ? '<div class="sold-overlay">SOLD</div>' : ''}
-      <img src="${item.images[0]}">
+      ${imagePart}
       ${item.images.length > 1 ? `
         <div class="arrow arrow-left">&#9664;</div>
         <div class="arrow arrow-right">&#9654;</div>` : ''}
