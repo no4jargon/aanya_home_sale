@@ -33,10 +33,6 @@ This scans the `items/` directory and produces `data.js` for the website.
 
 Open `index.html` in your browser or serve the directory with a local web server. The page lets visitors sort by category or price and select items to purchase. Clicking **Buy Now** shows an alert with contact information and the cart total.
 
-## Marking Items as Sold
-
-Use `python add_sold_field.py` if you need to add the `sold` flag to all items. Then manually change `"sold": true` in any `item_info.json` once an item has been purchased. The site will display a "SOLD" banner on that item.
-
 ## Customizing Contact Details
 
 Edit the message inside `script.js` (near the bottom) to include your own phone number or instructions. This text appears when a buyer clicks **Buy Now**.
